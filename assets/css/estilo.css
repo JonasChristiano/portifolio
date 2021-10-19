@@ -1,0 +1,57 @@
+
+.body {
+  background-color: rgba(0, 0, 0, .9);
+  margin: 0px;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr; 
+  grid-template-rows: 0.1fr 1fr 0.1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "header"
+    "main"
+    "footer"; 
+  justify-items: stretch;
+}
+.header { 
+  display: grid;
+  grid-template-columns: 0.8fr 0.8fr 1fr;
+  grid-template-rows: 0.2fr;
+  gap: 0px 0px;
+  grid-template-areas: "titulo . menu";
+  align-items: center;
+  justify-items: center;
+  grid-area: header;
+  background-color: #333;
+}
+.titulo { 
+  border: 1px solid linear-gradient(to right, rgba(153, 0, 255, 0.2), rgba(153,0,255,.9));
+  padding: 5px 15px;
+  background-image: linear-gradient(to right, rgba(153, 0, 255, 0.2), rgba(153,0,255,.9));
+  grid-area: titulo;
+}
+.menu { 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0 0;
+  grid-template-areas: 
+  "menu1 menu2 menu3 menu4";
+  grid-area: menu;
+  padding: 0px;
+}
+.menu1 a, .menu2 a, .menu3 a, .menu4 a {
+  color: #fff;
+  padding: 5px 10px;
+  background-image: linear-gradient(to right, rgba(153, 0, 255, 0.2), rgba(153,0,255,.9));
+}
+
+main { grid-area: main; }
+
+footer { grid-area: footer; }
+
+
+ ul {
+    list-style: none;
+}
+
